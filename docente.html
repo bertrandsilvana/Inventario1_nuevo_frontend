@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario de Laboratorio</title>
+    <link rel="stylesheet" href="css/docente.css">
+    <script src="js/docente.js" defer></script>
+</head>
+<body>
+    <header class="encabezado">
+     <div>
+        <h1>Inventario de Laboratorio</h1>
+        <p>Gestión de materiales y equipos</p>
+    </div>
+
+<button id="btnCerrarSesion" type="button">
+    Cerrar sesión
+</button>
+
+    <main class="contenedor">
+        <section class="panel">
+            <div class="titulo-panel">
+                <div>
+                    <h2>Materiales registrados</h2>
+                    <p>Listado de elementos del laboratorio</p>
+                </div>
+                <button id="btnActualizar" type="button">Actualizar listado</button>
+            </div>
+
+            <label for="buscarMaterial">Buscar material</label>
+            <input
+                type="search"
+                id="buscarMaterial"
+                placeholder="Escribí el nombre de un material..."
+            >
+
+            <p id="mensaje" role="status">Cargando materiales...</p>
+
+            <div class="tabla-contenedor">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Nombre</th>
+                            <th>Descripción</th>
+                            <th>Cantidad</th>
+                            <th>Estado</th>
+                            <th>Categoría</th>
+                            <th>Ubicación</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaMateriales">
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <script src="js/docente.js" defer></script>
+    <script src="js/app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingresar | Inventario1</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <main class="login-contenedor">
+        <section class="login-presentacion">
+            <div class="marca">I1</div>
+            <p class="etiqueta">GESTIÓN DE LABORATORIO</p>
+            <h1>Inventario<span>1</span></h1>
+            <p class="descripcion">
+                Un espacio para organizar materiales, controlar insumos
+                y facilitar el trabajo diario del laboratorio escolar.
+            </p>
+            <div class="detalle">
+                <span class="detalle-icono">✓</span>
+                Control de materiales y recursos
+            </div>
+            <div class="detalle">
+                <span class="detalle-icono">✓</span>
+                Gestión de solicitudes
+            </div>
+            <div class="detalle">
+                <span class="detalle-icono">✓</span>
+                Información centralizada
+            </div>
+        </section>
+
+        <section class="login-formulario">
+            <div class="formulario-contenido">
+                <p class="bienvenida">BIENVENIDO/A</p>
+                <h2>Iniciar sesión</h2>
+                <p class="subtitulo">
+                    Ingresá tus datos para continuar.
+                </p>
+
+                <form id="formLogin">
+                    <label for="email">Correo electrónico</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="nombre@escuela.edu"
+                        autocomplete="username"
+                        required
+                    >
+
+                    <label for="contrasena">Contraseña</label>
+                    <input
+                        type="password"
+                        id="contrasena"
+                        name="contrasena"
+                        placeholder="Ingresá tu contraseña"
+                        autocomplete="current-password"
+                        required
+                    >
+
+                    <button type="submit">Ingresar al sistema</button>
+                    <p id="mensaje" role="status" aria-live="polite"></p>
+                </form>
+
+                <p class="pie-formulario">
+                    Sistema de gestión de inventario escolar
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/login.js"></script>
+</body>
+</html>

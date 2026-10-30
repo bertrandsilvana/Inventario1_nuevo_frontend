@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de materiales | Inventario1</title>
+    <link rel="stylesheet" href="css/administrador.css">
+    <link rel="stylesheet" href="css/materiales.css">
+    <script src="js/app.js" defer></script>
+    <script src="js/materiales.js" defer></script>
+</head>
+<body>
+
+    <header class="encabezado-materiales">
+        <div>
+            <h1>Gestión de materiales</h1>
+            <p>Administración del inventario del laboratorio</p>
+        </div>
+
+        <button id="btnCerrarSesion" type="button">
+            Cerrar sesión
+        </button>
+    </header>
+
+    <main class="contenedor-materiales">
+
+        <section class="panel-materiales">
+            <div class="titulo-seccion">
+                <div>
+                    <h2>Registrar material</h2>
+                    <p>Completá los datos para incorporar un nuevo elemento.</p>
+                </div>
+            </div>
+
+            <form id="formMaterial">
+                <input type="hidden" id="id_material">
+
+                <div class="campos-formulario">
+                    <div>
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" required>
+                    </div>
+
+                    <div>
+                        <label for="descripcion">Descripción</label>
+                        <input type="text" id="descripcion">
+                    </div>
+
+                    <div>
+                        <label for="cantidad">Cantidad</label>
+                        <input type="number" id="cantidad" min="0" required>
+                    </div>
+
+                    <div>
+                        <label for="estado">Estado</label>
+                        <input type="text" id="estado" required>
+                    </div>
+
+                    <div>
+                        <label for="id_categoria">Categoría</label>
+                        <select id="id_categoria" required>
+                            <option value="">Seleccionar categoría</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="id_ubicacion">Ubicación</label>
+                        <select id="id_ubicacion" required>
+                            <option value="">Seleccionar ubicación</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="acciones-formulario">
+                    <button type="submit" id="btnGuardar">
+                        Registrar material
+                    </button>
+
+                    <button type="button" id="btnCancelar" hidden>
+                        Cancelar edición
+                    </button>
+                </div>
+
+                <p id="mensajeFormulario" role="status"></p>
+            </form>
+        </section>
+
+        <section class="panel-materiales">
+            <div class="titulo-seccion">
+                <div>
+                    <h2>Materiales registrados</h2>
+                    <p>Consultá y administrá los elementos del laboratorio.</p>
+                </div>
+
+                <button type="button" id="btnActualizar">
+                    Actualizar listado
+                </button>
+            </div>
+
+            <div class="tabla-contenedor">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Nombre</th>
+                            <th>Descripción</th>
+                            <th>Cantidad</th>
+                            <th>Estado</th>
+                            <th>Categoría</th>
+                            <th>Ubicación</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="tablaMateriales"></tbody>
+                </table>
+            </div>
+
+            <p id="mensajeListado" role="status"></p>
+        </section>
+
+    </main>
+
+</body>
+</html>

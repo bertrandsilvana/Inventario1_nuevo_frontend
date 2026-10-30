@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador | Inventario1</title>
+    <link rel="stylesheet" href="css/administrador.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <a class="logo" href="administrador.html">
+            <span class="logo-icono">I1</span>
+            <span>Inventario<span class="logo-numero">1</span></span>
+        </a>
+
+        <p class="menu-titulo">MENÚ PRINCIPAL</p>
+
+        
+           
+    <nav>
+            <a class="nav-link activo" href="administrador.html">
+                <span>▦</span> Panel principal
+            </a>
+
+            <a class="nav-link" href="inventario.html">
+                <span>▤</span> Materiales
+            </a>
+
+            <a class="nav-link" href="categorias.html">
+                <span>▧</span> Categorías
+            </a>
+
+            <a class="nav-link" href="ubicaciones.html">
+                <span>⌖</span> Ubicaciones
+            </a>
+
+            <a class="nav-link" href="solicitudes.html">
+                <span>⇄</span> Solicitudes
+            </a>
+
+            <a class="nav-link" href="reportes.html">
+                <span>▥</span> Reportes
+            </a>
+
+            <a class="nav-link" href="usuarios.html">
+                <span>♙</span> Usuarios
+            </a>
+</nav>
+
+
+        <div class="sidebar-pie">
+            <p>Inventario1</p>
+            <small>Gestión de laboratorio escolar</small>
+            <button id="btnCerrarSesion" type="button">Cerrar sesión</button>
+        </div>
+    </aside>
+
+    <main class="contenido">
+        <header class="encabezado">
+            <div>
+                <p class="ruta">INVENTARIO / PANEL PRINCIPAL</p>
+                <h1>Panel de administración</h1>
+                <p class="descripcion">
+                    Resumen y acceso a las herramientas del laboratorio.
+                </p>
+            </div>
+
+            <div class="perfil">
+                <div class="avatar">A</div>
+                <div>
+                    <strong>Administrador</strong>
+                    <small>Vista de demostración</small>
+                </div>
+            </div>
+        </header>
+
+        <section class="aviso">
+            <strong>Interfaz en desarrollo</strong>
+            <p>
+                Los indicadores son ilustrativos. El panel todavía no
+                está conectado a la autenticación ni a todos los módulos.
+            </p>
+        </section>
+
+        <section class="indicadores">
+            <article class="tarjeta">
+                <span class="tarjeta-icono">▤</span>
+                <p>Materiales registrados</p>
+                <h2>—</h2>
+                <small>Esperando conexión con la API</small>
+            </article>
+
+            <article class="tarjeta">
+                <span class="tarjeta-icono verde">⇄</span>
+                <p>Solicitudes pendientes</p>
+                <h2>—</h2>
+                <small>Esperando conexión con la API</small>
+            </article>
+
+            <article class="tarjeta">
+                <span class="tarjeta-icono naranja">!</span>
+                <p>Materiales con bajo stock</p>
+                <h2>—</h2>
+                <small>Esperando conexión con la API</small>
+            </article>
+        </section>
+
+        <section class="seccion">
+            <div class="seccion-cabecera">
+                <div>
+                    <h2>Gestión del inventario</h2>
+                    <p>Accedé rápidamente a las principales funciones.</p>
+                </div>
+            </div>
+
+            <div class="acciones">
+                <a class="accion" href="materiales.html">
+                    <span class="accion-icono">▤</span>
+                    <strong>Consultar materiales</strong>
+                    <small>Buscar por nombre, categoría o código.</small>
+                    <span class="accion-enlace">Abrir inventario →</span>
+                </a>
+
+                <a class="accion" href="materiales.html">
+                    <span class="accion-icono verde">＋</span>
+                    <strong>Registrar materiales</strong>
+                    <small>Próximamente: alta de materiales.</small>
+                    <span class="accion-enlace">Ir al inventario →</span>
+                </a>
+
+                <a class="accion" href="solicitudes.html">
+                    <span class="accion-icono naranja">⇄</span>
+                    <strong>Solicitudes de insumos</strong>
+                    <small>Consultar y gestionar pedidos.</small>
+                    <span class="accion-enlace">Ver solicitudes →</span>
+                </a>
+
+                <a class="accion" href="reportes.html">
+                    <span class="accion-icono violeta">▥</span>
+                    <strong>Reportes</strong>
+                    <small>Preparar informes del inventario.</small>
+                    <span class="accion-enlace">Ver reportes →</span>
+                </a>
+            </div>
+        </section>
+
+        <footer>
+            Inventario1 · Sistema de gestión de laboratorio escolar
+        </footer>
+    </main>
+    <script src="js/app.js"></script>
+</body>
+</html>
