@@ -1,0 +1,139 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de usuarios | Inventario1</title>
+
+    <link rel="stylesheet" href="css/administrador.css">
+    <link rel="stylesheet" href="css/materiales.css">
+
+    <script src="js/app.js" defer></script>
+    <script src="js/usuarios.js" defer></script>
+</head>
+<body>
+
+    <header class="encabezado-materiales">
+        <div>
+            <h1>Gestión de usuarios</h1>
+            <p>Administración de las cuentas del sistema</p>
+        </div>
+
+        <button id="btnCerrarSesion" type="button">Cerrar sesión</button>
+    </header>
+
+    <main class="contenedor-materiales">
+
+        <section class="panel-materiales">
+            <div class="titulo-seccion">
+                <div>
+                    <h2 id="tituloFormulario">Registrar usuario</h2>
+                    <p>Completá los datos para crear una cuenta.</p>
+                </div>
+            </div>
+
+            <form id="formUsuario" autocomplete="off">
+                <input type="hidden" id="id_usuario">
+
+                <div class="campos-formulario">
+
+                    <div>
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" required>
+                    </div>
+
+                    <div>
+                        <label for="apellido">Apellido</label>
+                        <input type="text" id="apellido" required>
+                    </div>
+
+                    <div>
+                        <label for="email">Correo electrónico</label>
+                        <input
+                                    type="email"
+                                    id="email"
+                                    name="nuevo_usuario_email"
+                                    autocomplete="off"
+                                    required
+                                >
+                    </div>
+
+                    <div>
+                        <label for="contrasena">Contraseña</label>
+                        <input
+                                type="password"
+                                id="contrasena"
+                                name="nueva_contrasena_usuario"
+                                autocomplete="new-password"
+                                required
+                                minlength="8"
+                            >
+                    </div>
+
+                    <div>
+                        <label for="id_rol">Rol</label>
+                        <select id="id_rol" required>
+                            <option value="">Seleccionar rol</option>
+                            <option value="1">Administrador</option>
+                            <option value="2">Docente</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="acciones-formulario">
+                    <button type="submit" id="btnGuardar">
+                        Registrar usuario
+                    </button>
+
+                    <button type="button" id="btnCancelar" hidden>
+                        Cancelar edición
+                    </button>
+                </div>
+
+                <p id="mensajeFormulario" role="status"></p>
+
+            </form>
+        </section>
+
+        <section class="panel-materiales">
+
+            <div class="titulo-seccion">
+                <div>
+                    <h2>Usuarios registrados</h2>
+                    <p>Consultá y administrá las cuentas del sistema.</p>
+                </div>
+
+                <button type="button" id="btnActualizar">
+                    Actualizar listado
+                </button>
+            </div>
+
+            <div class="tabla-contenedor">
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Email</th>
+                            <th>Rol</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="tablaUsuarios"></tbody>
+                </table>
+
+            </div>
+
+            <p id="mensajeListado" role="status"></p>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
