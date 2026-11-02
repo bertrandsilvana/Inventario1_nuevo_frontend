@@ -11,31 +11,64 @@ body {
     color: #263238;
 }
 
+/* ENCABEZADO */
+
 .encabezado {
     background-color: #234b46;
     color: white;
-    padding: 24px 5%;
+    padding: 22px 5%;
+}
+
+.encabezado-contenido {
+    max-width: 1400px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
 }
 
 .encabezado h1 {
     margin-bottom: 8px;
+    font-size: 25px;
 }
 
 .encabezado p {
     color: #e0e9e7;
 }
 
+.btn-cerrar {
+    background-color: #ffffff;
+    color: #234b46;
+}
+
+.btn-cerrar:hover {
+    background-color: #e0e9e7;
+}
+
+/* CONTENEDOR GENERAL */
+
 .contenedor {
     width: 90%;
     max-width: 1400px;
     margin: 32px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
 }
+
+/* PANELES */
 
 .panel {
     background-color: white;
-    padding: 24px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px #00000012;
+    padding: 28px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px #0000000d;
+    border: 1px solid #e5e9ec;
+}
+
+.panel-solicitud {
+    border-top: 4px solid #28675e;
 }
 
 .titulo-panel {
@@ -43,50 +76,141 @@ body {
     justify-content: space-between;
     align-items: center;
     gap: 16px;
-    margin-bottom: 24px;
+    margin-bottom: 25px;
 }
 
-.titulo-panel p {
-    color: #667085;
-    margin-top: 6px;
+.titulo-panel h2 {
+    color: #234b46;
+    margin-bottom: 7px;
+    font-size: 21px;
 }
+
+.titulo-panel p,
+.subtitulo p {
+    color: #667085;
+    font-size: 14px;
+}
+
+/* BOTONES */
 
 button {
     background-color: #28675e;
     color: white;
     border: none;
-    padding: 11px 16px;
+    padding: 11px 18px;
     border-radius: 6px;
     cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.2s;
 }
 
 button:hover {
     background-color: #194c45;
 }
 
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* CAMPOS */
+
 label {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
+    font-size: 14px;
+    color: #344054;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 11px 12px;
+    border: 1px solid #cbd5d9;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #263238;
+    background-color: white;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #28675e;
+    box-shadow: 0 0 0 2px #28675e20;
 }
 
 input[type="search"] {
-    width: 100%;
     max-width: 450px;
-    padding: 12px;
-    border: 1px solid #cbd5d9;
-    border-radius: 6px;
     margin-bottom: 18px;
 }
 
-#mensaje {
-    margin: 8px 0 16px;
-    color: #52616b;
+textarea {
+    resize: vertical;
 }
+
+/* FORMULARIO DE SOLICITUD */
+
+.form-solicitud {
+    display: grid;
+    grid-template-columns: 2fr 1fr auto;
+    align-items: end;
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+.campo {
+    min-width: 0;
+}
+
+.campo-boton button {
+    height: 40px;
+    white-space: nowrap;
+}
+
+.subtitulo {
+    margin-bottom: 16px;
+}
+
+.subtitulo h3 {
+    color: #234b46;
+    margin-bottom: 6px;
+    font-size: 17px;
+}
+
+.observaciones {
+    margin-top: 25px;
+}
+
+.acciones-solicitud {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+#btnEnviarSolicitud {
+    padding: 13px 24px;
+}
+
+#mensaje,
+#mensajeSolicitud {
+    margin: 12px 0;
+    color: #52616b;
+    font-size: 14px;
+}
+
+/* TABLAS */
 
 .tabla-contenedor {
     width: 100%;
     overflow-x: auto;
+    border: 1px solid #e5e9ec;
+    border-radius: 7px;
 }
 
 table {
@@ -95,11 +219,13 @@ table {
     min-width: 750px;
 }
 
-th, td {
+th,
+td {
     text-align: left;
     padding: 13px;
     border-bottom: 1px solid #e5e9ec;
     color: #263238;
+    font-size: 14px;
 }
 
 th {
@@ -116,8 +242,28 @@ tbody tr:hover {
     background-color: #edf5f2;
 }
 
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.tabla-detalles {
+    min-width: 600px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+    .form-solicitud {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .campo-boton {
+        grid-column: 1 / -1;
+    }
+}
+
 @media (max-width: 650px) {
-    .titulo-panel {
+    .encabezado-contenido {
         align-items: flex-start;
         flex-direction: column;
     }
@@ -125,9 +271,31 @@ tbody tr:hover {
     .contenedor {
         width: 95%;
         margin: 18px auto;
+        gap: 18px;
     }
 
     .panel {
-        padding: 15px;
+        padding: 18px;
+    }
+
+    .titulo-panel {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .form-solicitud {
+        grid-template-columns: 1fr;
+    }
+
+    .campo-boton {
+        grid-column: auto;
+    }
+
+    .acciones-solicitud {
+        justify-content: stretch;
+    }
+
+    .acciones-solicitud button {
+        width: 100%;
     }
 }

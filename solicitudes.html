@@ -1,0 +1,69 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitudes | Inventario1</title>
+    <link rel="stylesheet" href="css/solicitudes.css">
+</head>
+<body>
+
+    <header class="encabezado">
+        <div>
+            <h1>Gestión de solicitudes</h1>
+            <p>Administración de pedidos de materiales del laboratorio.</p>
+        </div>
+
+        <div class="acciones-superiores">
+            <a href="administrador.html">Volver al panel</a>
+            <button id="btnCerrarSesion" type="button">Cerrar sesión</button>
+        </div>
+    </header>
+
+    <main class="contenedor">
+
+        <section class="panel">
+            <div class="titulo-panel">
+                <div>
+                    <h2>Solicitudes recibidas</h2>
+                    <p>Consultá los pedidos realizados por los docentes.</p>
+                </div>
+
+                <button id="btnActualizar" type="button">
+                    Actualizar listado
+                </button>
+            </div>
+
+            <div class="filtros">
+                <label for="filtroEstado">Filtrar por estado</label>
+                <select id="filtroEstado">
+                    <option value="">Todos los estados</option>
+                    <option value="Pendiente">Pendiente</option>
+                    <option value="Aprobada">Aprobada</option>
+                    <option value="Rechazada">Rechazada</option>
+                    <option value="Parcialmente entregada">Parcialmente entregada</option>
+                    <option value="Entregada">Entregada</option>
+                </select>
+            </div>
+
+            <p id="mensaje" role="status">Cargando solicitudes...</p>
+
+            <div class="tabla-contenedor">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>N.º</th>
+                            <th>Fecha</th>
+                            <th>Docente</th>
+                            <th>Estado</th>
+                            <th>Observaciones</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaSolicitudes"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="
