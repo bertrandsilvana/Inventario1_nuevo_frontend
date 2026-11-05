@@ -1,0 +1,174 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #243047;
+    background: #f2f5fa;
+}
+
+.login-contenedor {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+}
+
+.login-presentacion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 70px;
+    color: white;
+    background: linear-gradient(145deg, #172d4d, #285b77);
+}
+
+.marca {
+    display: grid;
+    place-items: center;
+    width: 54px;
+    height: 54px;
+    margin-bottom: 38px;
+    border: 1px solid #ffffff75;
+    border-radius: 14px;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.etiqueta,
+.bienvenida {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.login-presentacion h1 {
+    margin: 12px 0;
+    font-size: clamp(42px, 5vw, 64px);
+}
+
+.login-presentacion h1 span {
+    color: #8bd3c7;
+}
+
+.descripcion {
+    max-width: 440px;
+    line-height: 1.8;
+    color: #e0e8f0;
+}
+
+.detalle {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 22px;
+}
+
+.detalle-icono {
+    display: grid;
+    place-items: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    color: #17334e;
+    background: #a6e4d7;
+    font-weight: bold;
+}
+
+.login-formulario {
+    display: grid;
+    place-items: center;
+    padding: 35px;
+    background: white;
+}
+
+.formulario-contenido {
+    width: 100%;
+    max-width: 390px;
+}
+
+.bienvenida {
+    color: #287d78;
+}
+
+.login-formulario h2 {
+    margin-bottom: 10px;
+    font-size: 32px;
+}
+
+.subtitulo {
+    margin-bottom: 32px;
+    color: #69758a;
+    line-height: 1.6;
+}
+
+form label {
+    display: block;
+    margin: 20px 0 8px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+form input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #d5dce6;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+form input:focus {
+    outline: 2px solid #8bd3c7;
+    border-color: #287d78;
+}
+
+form button {
+    width: 100%;
+    margin-top: 28px;
+    padding: 15px;
+    border: 0;
+    border-radius: 8px;
+    color: white;
+    background: #245c70;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #194657;
+}
+
+#mensaje {
+    min-height: 20px;
+    color: #9a3412;
+    font-size: 14px;
+}
+
+.pie-formulario {
+    margin-top: 35px;
+    color: #7b8494;
+    font-size: 12px;
+    text-align: center;
+}
+
+@media (max-width: 760px) {
+    .login-contenedor {
+        grid-template-columns: 1fr;
+    }
+
+    .login-presentacion {
+        padding: 35px 25px;
+    }
+
+    .marca {
+        margin-bottom: 20px;
+    }
+
+    .login-formulario {
+        padding: 40px 25px;
+    }
+}
