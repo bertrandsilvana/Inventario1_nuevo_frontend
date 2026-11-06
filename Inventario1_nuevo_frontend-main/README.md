@@ -6,7 +6,7 @@ Frontend web para consultar y administrar el inventario de un laboratorio escola
 
 ## Contenido
 
-- [Requisitos](#requisitos)
+- [Requisitos](#requisitos)vvvvv,.
 - [Ejecución local](#ejecución-local)
 - [Pantallas y funciones](#pantallas-y-funciones)
 - [Estructura del proyecto](#estructura-del-proyecto)
