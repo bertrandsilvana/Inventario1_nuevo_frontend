@@ -1,4 +1,4 @@
-```html
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -47,7 +47,7 @@
                 </select>
             </div>
 
-            <p id="mensaje" role="status">La gestión de solicitudes todavía no está conectada a la API.</p>
+            <p id="mensaje" role="status">Cargando solicitudes...</p>
 
             <div class="tabla-contenedor">
                 <table>
@@ -66,10 +66,31 @@
             </div>
         </section>
 
+        <section class="panel">
+            <h2>Detalle de la solicitud</h2>
+
+            <p id="mensajeDetalle">
+                Seleccioná una solicitud para consultar sus materiales.
+            </p>
+
+            <div class="tabla-contenedor">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Material</th>
+                            <th>Cantidad solicitada</th>
+                            <th>Cantidad entregada</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaDetalles"></tbody>
+                </table>
+            </div>
         </section>
 
     </main>
 
-    <script src="js/app.js"></script>
+    <script src="js/app.js" defer></script>
+    <script src="js/solicitudes.js" defer></script>
+
 </body>
 </html>
