@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario de Laboratorio</title>
+    <link rel="stylesheet" href="css/docente.css">
+</head>
+<body>
+
+    <header class="encabezado">
+        <div class="encabezado-contenido">
+            <div>
+                <h1>Inventario de Laboratorio</h1>
+                <p>Gestión de materiales y equipos</p>
+            </div>
+
+            <button id="btnCerrarSesion" type="button" class="btn-cerrar">
+                Cerrar sesión
+            </button>
+        </div>
+    </header>
+
+    <main class="contenedor">
+
+        <!-- SECCIÓN 1: INVENTARIO -->
+        <section class="panel">
+            <div class="titulo-panel">
+                <div>
+                    <h2>Materiales disponibles</h2>
+                    <p>Consultá los elementos registrados en el laboratorio.</p>
+                </div>
+
+                <button id="btnActualizar" type="button">
+                    Actualizar listado
+                </button>
+            </div>
+
+            <label for="buscarMaterial">Buscar material</label>
+            <input
+                type="search"
+                id="buscarMaterial"
+                placeholder="Escribí el nombre de un material..."
+            >
+
+            <p id="mensaje" role="status">Cargando materiales...</p>
+
+            <div class="tabla-contenedor">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Nombre</th>
+                            <th>Descripción</th>
+                            <th>Cantidad</th>
+                            <th>Estado</th>
+                            <th>Categoría</th>
+                            <th>Ubicación</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaMateriales"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2: NUEVA SOLICITUD -->
+        <section class="panel panel-solicitud">
+
+            <div class="titulo-panel">
+                <div>
+                    <h2>Nueva solicitud de materiales</h2>
+                    <p>Seleccioná los elementos que necesitás para trabajar.</p>
+                </div>
+            </div>
+
+            <form id="formSolicitud" class="form-solicitud">
+
+                <div class="campo">
+                    <label for="materialSolicitud">Material</label>
+                    <select id="materialSolicitud" required>
+                        <option value="">Seleccioná un material</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="cantidadSolicitud">Cantidad solicitada</label>
+                    <input
+                        type="number"
+                        id="cantidadSolicitud"
+                        min="1"
+                        placeholder="Ingresá una cantidad"
+                        required
+                    >
+                </div>
+
+                <div class="campo campo-boton">
+                    <button type="submit">Agregar material</button>
+                </div>
+
+            </form>
+
+            <div class="subtitulo">
+                <h3>Materiales seleccionados</h3>
+                <p>Revisá los materiales antes de enviar la solicitud.</p>
+            </div>
+
+            <div class="tabla-contenedor">
+                <table class="tabla-detalles">
+                    <thead>
+                        <tr>
+                            <th>Material</th>
+                            <th>Stock disponible</th>
+                            <th>Cantidad solicitada</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaDetalleSolicitud"></tbody>
+                </table>
+            </div>
+
+            <div class="campo observaciones">
+                <label for="observacionesSolicitud">Observaciones</label>
+                <textarea
+                    id="observacionesSolicitud"
+                    rows="3"
+                    placeholder="Escribí alguna aclaración (opcional)"
+                ></textarea>
+            </div>
+
+            <div class="acciones-solicitud">
+                <button type="button" id="btnEnviarSolicitud">
+                    Enviar solicitud
+                </button>
+            </div>
+
+            <p id="mensajeSolicitud" role="status"></p>
+
+        </section>
+
+    </main>
+
+    <script src="js/docente.js" defer></script>
+    <script src="js/app.js" defer></script>
+    <script src="js/solicitudes-docente.js" defer></script>
+
+</body>
+</html>
