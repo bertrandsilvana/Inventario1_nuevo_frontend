@@ -172,3 +172,199 @@ form button:hover {
         padding: 40px 25px;
     }
 }
+
+body {
+    font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+    background: #f3f6f1;
+}
+
+.login-contenedor {
+    grid-template-columns: minmax(0, 1.08fr) minmax(390px, .92fr);
+    background: #fffefa;
+}
+
+.login-presentacion {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    padding: clamp(38px, 7vw, 104px);
+    background:
+        linear-gradient(115deg, #183c3b 0%, #205951 58%, #34786c 100%);
+}
+
+.login-presentacion::before {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background-image: linear-gradient(#ffffff08 1px, transparent 1px), linear-gradient(90deg, #ffffff08 1px, transparent 1px);
+    background-size: 42px 42px;
+    mask-image: linear-gradient(120deg, #0009, transparent 75%);
+    content: "";
+}
+
+.login-presentacion::after {
+    position: absolute;
+    z-index: -1;
+    right: -120px;
+    bottom: -155px;
+    width: 450px;
+    height: 450px;
+    border: 1px solid #d5f1e52b;
+    border-radius: 50%;
+    box-shadow: 0 0 0 28px #d5f1e510, 0 0 0 58px #d5f1e50a;
+    content: "";
+}
+
+.marca {
+    border-color: #d7f0e660;
+    border-radius: 15px;
+    color: #153e3a;
+    background: linear-gradient(145deg, #d2f3e5, #82cbb9);
+    box-shadow: 0 10px 24px #0f29243d;
+    transition: transform .25s ease;
+}
+
+.marca:hover {
+    transform: rotate(-7deg) scale(1.08);
+}
+
+.etiqueta {
+    color: #b9ded2;
+}
+
+.login-presentacion h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 600;
+}
+
+.login-presentacion h1 span {
+    color: #f0b468;
+}
+
+.detalle {
+    transition: transform .2s ease;
+}
+
+.detalle:hover {
+    transform: translateX(5px);
+}
+
+.detalle-icono {
+    flex: 0 0 25px;
+    color: #18433e;
+    background: #b8e4d3;
+    box-shadow: 0 4px 10px #0e292329;
+}
+
+.login-formulario {
+    position: relative;
+    background:
+        radial-gradient(ellipse at 100% 0, #e6f3eb 0, transparent 24rem),
+        #fffefa;
+}
+
+.formulario-contenido {
+    max-width: 410px;
+    animation: entrada-formulario .55s ease both;
+}
+
+@keyframes entrada-formulario {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.bienvenida {
+    color: #348273;
+}
+
+.login-formulario h2 {
+    color: #203e3d;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.subtitulo {
+    color: #647779;
+}
+
+form label {
+    color: #314b4a;
+}
+
+form input {
+    border-color: #cadbd5;
+    border-radius: 9px;
+    background: #fff;
+    transition: border-color .2s ease, box-shadow .2s ease, transform .2s ease;
+}
+
+form input:hover {
+    border-color: #91b9aa;
+}
+
+form input:focus {
+    outline: none;
+    border-color: #287c70;
+    box-shadow: 0 0 0 4px #287c701a;
+}
+
+form button {
+    border-radius: 9px;
+    background: linear-gradient(110deg, #287c70, #24675e);
+    box-shadow: 0 8px 18px #23685f2b;
+    transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
+}
+
+form button:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(110deg, #329080, #28766a);
+    box-shadow: 0 12px 24px #23685f38;
+}
+
+form button:active {
+    transform: translateY(0) scale(.99);
+}
+
+.pie-formulario {
+    color: #71817e;
+}
+
+button:focus-visible,
+input:focus-visible {
+    outline: 3px solid #e6a544;
+    outline-offset: 3px;
+}
+
+@media (max-width: 760px) {
+    .login-contenedor {
+        grid-template-columns: 1fr;
+    }
+
+    .login-presentacion {
+        min-height: 450px;
+        padding: 38px 28px;
+    }
+
+    .login-formulario {
+        min-height: 500px;
+        padding: 48px 25px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+    }
+}
