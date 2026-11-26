@@ -27,15 +27,13 @@ body {
 }
 
 .marca {
-    display: grid;
-    place-items: center;
-    width: 54px;
-    height: 54px;
-    margin-bottom: 38px;
-    border: 1px solid #ffffff75;
-    border-radius: 14px;
-    font-size: 23px;
-    font-weight: bold;
+    position: absolute;
+    top: clamp(24px, 4vw, 48px);
+    left: clamp(24px, 4vw, 48px);
+    width: clamp(72px, 8vw, 104px);
+    height: auto;
+    margin: 0;
+    object-fit: contain;
 }
 
 .etiqueta,
@@ -216,16 +214,7 @@ body {
 }
 
 .marca {
-    border-color: #d7f0e660;
-    border-radius: 15px;
-    color: #153e3a;
-    background: linear-gradient(145deg, #d2f3e5, #82cbb9);
-    box-shadow: 0 10px 24px #0f29243d;
-    transition: transform .25s ease;
-}
-
-.marca:hover {
-    transform: rotate(-7deg) scale(1.08);
+    filter: drop-shadow(0 5px 8px #0f29243d);
 }
 
 .etiqueta {
@@ -350,7 +339,13 @@ input:focus-visible {
 
     .login-presentacion {
         min-height: 450px;
-        padding: 38px 28px;
+        padding: 125px 28px 38px;
+    }
+
+    .marca {
+        top: 24px;
+        left: 24px;
+        width: 72px;
     }
 
     .login-formulario {

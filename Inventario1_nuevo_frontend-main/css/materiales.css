@@ -157,6 +157,38 @@ tbody tr:hover {
     background-color: #8f1d14;
 }
 
+.btn-editar,
+.btn-eliminar {
+    display: inline-grid;
+    place-items: center;
+    width: 38px;
+    height: 38px;
+    padding: 0;
+}
+
+.btn-editar svg,
+.btn-eliminar svg {
+    width: 18px;
+    height: 18px;
+    fill: none;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.8;
+}
+
+.btn-eliminar {
+    background-color: #b42318;
+}
+
+.btn-eliminar:hover {
+    background-color: #8f1d14;
+}
+
+.titulo-seccion h2 {
+    color: #203e3d;
+}
+
 @media (max-width: 700px) {
     .encabezado-materiales {
         align-items: flex-start;

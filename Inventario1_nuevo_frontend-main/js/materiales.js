@@ -141,8 +141,10 @@ function mostrarMateriales(lista) {
 
         const btnEditar = document.createElement('button');
         btnEditar.type = 'button';
-        btnEditar.textContent = 'Editar';
         btnEditar.className = 'btn-editar';
+        btnEditar.innerHTML = '<svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L8 18l-4 1 1-4Z"/></svg>';
+        btnEditar.setAttribute('aria-label', 'Editar material');
+        btnEditar.title = 'Editar material';
 
         btnEditar.addEventListener('click', () => {
             cargarMaterialEnFormulario(material);
@@ -150,8 +152,10 @@ function mostrarMateriales(lista) {
 
         const btnEliminar = document.createElement('button');
         btnEliminar.type = 'button';
-        btnEliminar.textContent = 'Eliminar';
         btnEliminar.className = 'btn-eliminar';
+        btnEliminar.innerHTML = '<svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 6h18"/><path d="M8 6V4h8v2"/><path d="m19 6-1 14H6L5 6"/><path d="M10 11v5"/><path d="M14 11v5"/></svg>';
+        btnEliminar.setAttribute('aria-label', 'Eliminar material');
+        btnEliminar.title = 'Eliminar material';
 
         btnEliminar.addEventListener('click', () => {
             eliminarMaterial(material.id_material);

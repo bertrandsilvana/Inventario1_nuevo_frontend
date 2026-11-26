@@ -249,8 +249,16 @@ function mostrarReportes() {
 
                     <button class="btn-tabla btn-eliminar"
                         data-accion="eliminar"
-                        data-id="${reporte.id_reporte}">
-                        Eliminar
+                        data-id="${reporte.id_reporte}"
+                        aria-label="Eliminar reporte"
+                        title="Eliminar reporte">
+                        <svg aria-hidden="true" viewBox="0 0 24 24">
+                            <path d="M3 6h18"/>
+                            <path d="M8 6V4h8v2"/>
+                            <path d="m19 6-1 14H6L5 6"/>
+                            <path d="M10 11v5"/>
+                            <path d="M14 11v5"/>
+                        </svg>
                     </button>
                 ` : ''}
             </td>
